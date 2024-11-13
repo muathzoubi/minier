@@ -52,7 +52,7 @@ export default function RootLayout({
         <GoogleTagManager gtmId={Settings.gtm} />
       )}
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} font-regular`}
+        className={` font-regular`}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -61,11 +61,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main className="px-5 sm:px-8 h-auto">
+          <main className=" h-auto">
             {children}
           </main>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>
