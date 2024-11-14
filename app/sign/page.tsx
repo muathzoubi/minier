@@ -9,6 +9,7 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
 import { useToast } from "@/components/ui/use-toast"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import Link from 'next/link'
 
 // تكوين Firebase - استبدل هذه القيم بقيم مشروعك الخاص
 const firebaseConfig = {
@@ -54,9 +55,9 @@ export default function CryptoInvestmentPlatform() {
   }
 
   return (
-    <div className="flex h-screen bg-gray-100 dark:bg-gray-900 text-green-600" dir='rtl'>
-      {/* Sidebar */}
-      <aside className=" w-64 bg-gray-400 dark:bg-gray-800 p-4 xlg:hidden">
+    <div className="flex h-screen  text-green-600" >
+      {/* Sidebar */ user ?
+      <aside className=" w-64 bg-gray-900 dark:bg-gray-800 p-4 xlg:hidden">
         <h1 className="text-2xl font-bold text-green-500  mb-6 text-center">
         <img src='/images/logo-inv20.svg' alt='logo' width={155}/>
             
@@ -64,34 +65,36 @@ export default function CryptoInvestmentPlatform() {
         <nav>
           <ul className="space-y-2 text-white " dir="rtl">
             <li>
-              <Button variant="ghost" className="w-full justify-start">
+              <Link href="/"><Button variant="ghost" className="w-full justify-start">
                 <LayoutDashboard className="ml-2 h-4 w-4" />
                 لوحة التحكم
-              </Button>
+              </Button></Link>
             </li>
             <li>
-              <Button variant="ghost" className="w-full justify-start">
+            <Link href="/wallet">    <Button variant="ghost" className="w-full justify-start">
                 <Wallet className="ml-2 h-4 w-4" />
                 المحفظة
-              </Button>
+              </Button></Link>
             </li>
             <li>
-              <Button variant="ghost" className="w-full justify-start">
+            <Link href="/"><Button variant="ghost" className="w-full justify-start">
                 <BarChart3 className="ml-2 h-4 w-4" />
                 الاستثمارات
-              </Button>
+              </Button></Link>
             </li>
             <li>
-              <Button variant="ghost" className="w-full justify-start">
+            <Link href="/">      <Button variant="ghost" className="w-full justify-start">
                 <CreditCard className="ml-2 h-4 w-4" />
                 المعاملات
-              </Button>
+              </Button></Link>
             </li>
             <li>
-              <Button variant="ghost" className="w-full justify-start">
+       <Link href="/">       
+       <Button variant="ghost" className="w-full justify-start">
                 <Settings className="ml-2 h-4 w-4" />
                 الإعدادات
               </Button>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -101,10 +104,12 @@ export default function CryptoInvestmentPlatform() {
             تسجيل الخروج
           </Button>
         )}
-      </aside>
+      </aside>:null
+      }
 
       {/* Main Content */}
       <main className="flex-1 p-8">
+        
         {user ? (
           <Dashboard user={user} />
         ) : (

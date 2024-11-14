@@ -67,7 +67,15 @@
     height: 100%;
     width: 100%;
     font-family: "Rubik", serif !important;
-
+animation: linear show 2s ;
+  }
+}
+@keyframes show {
+  
+  from{
+opacity: 0;
+  }to{
+    opacity: 1;
   }
 }
 

@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Bitcoin, DollarSign, TrendingUp, Shield, BarChart2, Users } from 'lucide-react'
+import { Bitcoin, DollarSign, TrendingUp, Shield, BarChart2, Users, Check } from 'lucide-react'
 import Link from 'next/link'
 
 const FloatingShape = ({ size, color, speed, delay }:any) => {
@@ -110,6 +110,66 @@ export default function CryptoInvestLanding() {
               <CardContent>
                 <p>حماية قصوى لأصولك الرقمية مع أحدث تقنيات الأمان</p>
               </CardContent>
+            </Card>
+          </div>
+        </section>
+   {/* قسم الخطط */}
+   <section className="container mx-auto mt-20 px-4">
+          <h3 className="text-3xl font-bold text-center mb-10">اختر الخطة المناسبة لك</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-blue-800 bg-opacity-50 border-blue-700 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-2xl">الخطة الأساسية</CardTitle>
+                <CardDescription>للمستثمرين المبتدئين</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold mb-4">$9.99<span className="text-sm font-normal">/شهريًا</span></p>
+                <ul className="space-y-2">
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تداول حتى 5 عملات مشفرة</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تحليلات أساسية</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> دعم عبر البريد الإلكتروني</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> دعم عبر البريد الإلكتروني</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg- border">اشترك الآن</Button>
+              </CardFooter>
+            </Card>
+            <Card className="bg-blue-800 bg-opacity-50 border-blue-700 backdrop-blur-sm border-2 border-green-400">
+              <CardHeader>
+                <CardTitle className="text-2xl">الخطة الاحترافية</CardTitle>
+                <CardDescription>للمستثمرين النشطين</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold mb-4">$29.99<span className="text-sm font-normal">/شهريًا</span></p>
+                <ul className="space-y-2">
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تداول غير محدود للعملات المشفرة</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تحليلات متقدمة وتنبيهات السوق</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> دعم على مدار الساعة</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> استراتيجيات استثمار مخصصة</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg-green-500 text- hover:bg-green-500 border">اشترك الآن</Button>
+              </CardFooter>
+            </Card>
+            <Card className="bg-blue-800 bg-opacity-50 border-blue-700 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="text-2xl">خطة المؤسسات</CardTitle>
+                <CardDescription>للشركات والمستثمرين الكبار</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold mb-4">اتصل بنا<span className="text-sm font-normal"> للتسعير</span></p>
+                <ul className="space-y-2">
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> حلول مخصصة للمؤسسات</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> API للتداول الآلي</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> مدير حساب مخصص</li>
+                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تقارير وتحليلات متقدمة</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg- border">اتصل بنا</Button>
+              </CardFooter>
             </Card>
           </div>
         </section>
