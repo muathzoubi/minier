@@ -23,7 +23,7 @@ export default function ExplanationPage() {
             <Card>
               <CardHeader>
                 <CardTitle>أساسيات الاستثمار في العملات المشفرة</CardTitle>
-                <CardDescription>تعرف على المفاهيم الأساسية قبل البدء</CardDescription>
+                <CardDescription>تعرف على المغاهيم الاساسية قبل البدء</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <h3 className="text-lg font-semibold">ما هي العملات المشفرة؟</h3>

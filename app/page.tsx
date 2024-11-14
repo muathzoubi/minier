@@ -118,14 +118,16 @@ export default function CryptoInvestLanding() {
    <section className="container mx-auto mt-20 px-4">
           <h3 className="text-3xl font-bold text-center mb-10">اختر الخطة المناسبة لك</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-green-300 bg-opacity-50 border-blue-700 backdrop-blur-sm">
+            <Card className="bg-green-300 bg-opacity-50 border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl">الخطة الأساسية</CardTitle>
                 <CardDescription>للمستثمرين المبتدئين</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold mb-4">$9.99<span className="text-sm font-normal">/شهريًا</span></p>
+                <p className="text-3xl font-bold mb-4">$29.99<span className="text-sm font-normal">/شهريًا</span></p>
                 <ul className="space-y-2">
+                                  <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> ربح يومي  $5</li>
+
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تداول حتى 5 عملات مشفرة</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تحليلات أساسية</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> دعم عبر البريد الإلكتروني</li>
@@ -136,14 +138,16 @@ export default function CryptoInvestLanding() {
                 <Button className="w-full bg- border">اشترك الآن</Button>
               </CardFooter>
             </Card>
-            <Card className="bg-blue-800 bg-opacity-50 border-blue-700 backdrop-blur-sm border-2 border-green-400">
+            <Card className="bg- bg-opacity-50 border-green-700 backdrop-blur-sm border-2 border-green-400">
               <CardHeader>
                 <CardTitle className="text-2xl">الخطة الاحترافية</CardTitle>
                 <CardDescription>للمستثمرين النشطين</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold mb-4">$29.99<span className="text-sm font-normal">/شهريًا</span></p>
+                <p className="text-3xl font-bold mb-4">$129.99<span className="text-sm font-normal">/شهريًا</span></p>
                 <ul className="space-y-2">
+                <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> ربح يومي $20</li>
+
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تداول غير محدود للعملات المشفرة</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> تحليلات متقدمة وتنبيهات السوق</li>
                   <li className="flex items-center"><Check className="w-5 h-5 mr-2 text-green-400" /> دعم على مدار الساعة</li>
@@ -154,9 +158,9 @@ export default function CryptoInvestLanding() {
                 <Button className="w-full bg-green-500 text- hover:bg-green-500 border">اشترك الآن</Button>
               </CardFooter>
             </Card>
-            <Card className="bg-blue-800 bg-opacity-50 border-blue-700 backdrop-blur-sm">
+            <Card className="bg-green-300 bg-opacity-50 border-green-300 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-2xl">خطة المؤسسات</CardTitle>
+                <CardTitle className="text-2xl">خطة الاعمال</CardTitle>
                 <CardDescription>للشركات والمستثمرين الكبار</CardDescription>
               </CardHeader>
               <CardContent>

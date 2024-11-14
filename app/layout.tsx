@@ -66,7 +66,7 @@ export default function RootLayout({
           </main>
          {/* تذييل الصفحة */}
          <footer className="py-6 text-center backdrop-blur-sm">
-          <p>&copy; 2024 كريبتو إنفست. جميع الحقوق محفوظة.</p>
+          <p>&copy; 2024 كريبتو إنفست. جميع الحقوق محفوظة</p>
         </footer>
         </ThemeProvider>
       </body>
