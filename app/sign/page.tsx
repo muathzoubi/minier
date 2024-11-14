@@ -12,10 +12,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 // تكوين Firebase - استبدل هذه القيم بقيم مشروعك الخاص
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  // ... المزيد من خيارات التكوين
+    apiKey: "AIzaSyCk2ac7zLA-N_F3P_dY2fcdnL4tP6K6fVw",
+    authDomain: "zinsappata.firebaseapp.com",
+    databaseURL: "https://zinsappata-default-rtdb.firebaseio.com",
+    projectId: "zinsappata",
+    storageBucket: "zinsappata.appspot.com",
+    messagingSenderId: "113369271332",
+    appId: "1:113369271332:web:1a55d786fac0aa96cb5cb1",
+    measurementId: "G-V9LKMQYCTN"
 };
 
 // تهيئة Firebase
@@ -50,47 +54,50 @@ export default function CryptoInvestmentPlatform() {
   }
 
   return (
-    <div className="flex h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="flex h-screen bg-gray-100 dark:bg-gray-900 text-green-600" dir='rtl'>
       {/* Sidebar */}
-      <aside className="w-64 bg-white dark:bg-gray-800 p-4">
-        <h1 className="text-2xl font-bold mb-6 text-center">كريبتو إنفست</h1>
+      <aside className=" w-64 bg-gray-400 dark:bg-gray-800 p-4 xlg:hidden">
+        <h1 className="text-2xl font-bold text-green-500  mb-6 text-center">
+        <img src='/images/logo-inv20.svg' alt='logo' width={155}/>
+            
+            </h1>
         <nav>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-white " dir="rtl">
             <li>
               <Button variant="ghost" className="w-full justify-start">
-                <LayoutDashboard className="mr-2 h-4 w-4" />
+                <LayoutDashboard className="ml-2 h-4 w-4" />
                 لوحة التحكم
               </Button>
             </li>
             <li>
               <Button variant="ghost" className="w-full justify-start">
-                <Wallet className="mr-2 h-4 w-4" />
+                <Wallet className="ml-2 h-4 w-4" />
                 المحفظة
               </Button>
             </li>
             <li>
               <Button variant="ghost" className="w-full justify-start">
-                <BarChart3 className="mr-2 h-4 w-4" />
+                <BarChart3 className="ml-2 h-4 w-4" />
                 الاستثمارات
               </Button>
             </li>
             <li>
               <Button variant="ghost" className="w-full justify-start">
-                <CreditCard className="mr-2 h-4 w-4" />
+                <CreditCard className="ml-2 h-4 w-4" />
                 المعاملات
               </Button>
             </li>
             <li>
               <Button variant="ghost" className="w-full justify-start">
-                <Settings className="mr-2 h-4 w-4" />
+                <Settings className="ml-2 h-4 w-4" />
                 الإعدادات
               </Button>
             </li>
           </ul>
         </nav>
         {user && (
-          <Button variant="ghost" className="w-full justify-start mt-4" onClick={handleSignOut}>
-            <LogIn className="mr-2 h-4 w-4" />
+          <Button variant="ghost" className="w-full justify-start mt-4  text-red-600 " onClick={handleSignOut}>
+            <LogIn className="ml-2 h-4 w-4" />
             تسجيل الخروج
           </Button>
         )}
@@ -176,8 +183,8 @@ function AuthTabs() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <Button type="submit" className="w-full">
-                <LogIn className="mr-2 h-4 w-4" /> تسجيل الدخول
+              <Button type="submit" className="w-full bg-green-500">
+                <LogIn className="ml-2 h-4 w-4" /> تسجيل الدخول
               </Button>
             </form>
           </CardContent>
@@ -211,8 +218,8 @@ function AuthTabs() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <Button type="submit" className="w-full">
-                <UserPlus className="mr-2 h-4 w-4" /> إنشاء الحساب
+              <Button type="submit" className="w-full bg-green-500">
+                <UserPlus className="ml-2 h-4 w-4" /> إنشاء الحساب
               </Button>
             </form>
           </CardContent>
@@ -224,36 +231,36 @@ function AuthTabs() {
 
 function Dashboard({ user }:any) {
   return (
-    <div className="space-y-4">
-      <h2 className="text-2xl font-bold">مرحبًا بك في لوحة التحكم، {user.email}</h2>
+    <div className="space-y-4" dir='rtl'>
+      <h2 className="text-2xl font-bold text-green-500 ">مرحبًا بك في لوحة التحكم، {user.email}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">إجمالي الرصيد</CardTitle>
+            <CardTitle className="text-sm font-medium  text-green-500 ">إجمالي الرصيد</CardTitle>
             <DollarSign className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$45,231.89</div>
+            <div className="text-2xl font-bold text-green-500 ">$45,231.89</div>
             <p className="text-xs text-muted-foreground">+20.1% من الشهر الماضي</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">الاستثمارات النشطة</CardTitle>
+            <CardTitle className="text-sm font-medium  text-green-500 ">الاستثمارات النشطة</CardTitle>
             <BarChart3 className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">7</div>
+            <div className="text-2xl font-bold text-green-500 ">7</div>
             <p className="text-xs text-muted-foreground">+2 من الأسبوع الماضي</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">إجمالي الأرباح</CardTitle>
+            <CardTitle className="text-sm font-medium  text-green-500 ">إجمالي الأرباح</CardTitle>
             <CreditCard className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$12,234.59</div>
+            <div className="text-2xl font-bold text-green-500 ">$12,234.59</div>
             <p className="text-xs text-muted-foreground">+19% من الشهر الماضي</p>
           </CardContent>
         </Card>

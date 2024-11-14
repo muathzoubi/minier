@@ -36,8 +36,7 @@ const FloatingShape = ({ size, color, speed, delay }:any) => {
 
 export default function CryptoInvestLanding() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-900 via-green-900 to-purple-900 text-white overflow-hidden" dir="rtl">
-      {/* خلفية متحركة */}
+<>     {/* خلفية متحركة */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <FloatingShape size={100} color="#4C51BF" speed={1} delay={0} />
         <FloatingShape size={80} color="#6B46C1" speed={1.5} delay={2000} />
@@ -50,7 +49,9 @@ export default function CryptoInvestLanding() {
       <div className="relative z-10">
         {/* الرأس */}
         <header className="container mx-auto py-6 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">كريبتو إنفست</h1>
+          <h1 className="text-2xl font-bold">
+            <img src='/images/logo-inv20.svg' alt='logo' width={155}/>
+          </h1>
           <nav className="flex items-center space-x-4 space-x-reverse">
             <ul className="flex space-x-4 space-x-reverse xsm:hidden">
               <li><Button variant="ghost">الرئيسية</Button></li>
@@ -59,7 +60,7 @@ export default function CryptoInvestLanding() {
               <li><Button variant="ghost">تواصل معنا</Button></li>
             </ul>
            <Link href="/sign"> <Button variant="outline" className="mr-2 text-black">تسجيل الدخول</Button></Link>
-           <Link href="/sign"> <Button>التسجيل</Button></Link>
+           <Link href="/sign"> <Button className='bg-green-600'>التسجيل</Button></Link>
           </nav>
         </header>
 
@@ -169,16 +170,13 @@ export default function CryptoInvestLanding() {
               </form>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">اشترك الآن</Button>
+              <Button className="w-full bg-green-600">اشترك الآن</Button>
             </CardFooter>
           </Card>
         </section>
 
-        {/* تذييل الصفحة */}
-        <footer className="bg-green-900 bg-opacity-50 py-6 text-center backdrop-blur-sm">
-          <p>&copy; 2024 كريبتو إنفست. جميع الحقوق محفوظة.</p>
-        </footer>
+     
       </div>
-    </div>
+    </>
   )
 }

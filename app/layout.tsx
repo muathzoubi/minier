@@ -61,9 +61,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className=" h-auto">
+          <main className=" h-auto min-h-screen bg-gradient-to-b from-blue-900 via-green-900 to-purple-900 text-white overflow-hidden">
             {children}
           </main>
+         {/* تذييل الصفحة */}
+         <footer className="py-6 text-center backdrop-blur-sm">
+          <p>&copy; 2024 كريبتو إنفست. جميع الحقوق محفوظة.</p>
+        </footer>
         </ThemeProvider>
       </body>
     </html>
