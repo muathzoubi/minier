@@ -8,10 +8,10 @@ import { ArrowUpRight, ArrowDownLeft, Wallet, CreditCard, RefreshCw } from 'luci
 
 export default function WalletPage() {
   return (
-      <div className="container mx-auto mt-12" dir='rtl'>
+      <div className="container mx-auto mt-12 bg-white" dir='rtl'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Card className="col-span-2 bg-">
-            <CardHeader className='text-green-100'>
+            <CardHeader className='text-white'>
               <CardTitle className="text-2xl">الرصيد الإجمالي</CardTitle>
             </CardHeader>
             <CardContent>
@@ -45,7 +45,7 @@ export default function WalletPage() {
           </TabsList>
           <TabsContent value="assets ">
             <Card>
-              <CardHeader className='text-green-200' >
+              <CardHeader className='text-white' >
                 <CardTitle>أصولك</CardTitle>
                 <CardDescription>قائمة بجميع العملات المشفرة في محفظتك</CardDescription>
               </CardHeader>

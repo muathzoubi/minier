@@ -161,7 +161,7 @@ function AuthTabs() {
   }
 
   return (
-    <Tabs defaultValue="login" className="w-[400px] mx-auto">
+    <Tabs defaultValue="login" className="w-[350px] m-auto py-24">
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="login">تسجيل الدخول</TabsTrigger>
         <TabsTrigger value="register">إنشاء حساب</TabsTrigger>

@@ -274,6 +274,7 @@ span.katex-html {
 .obj1{
 position: absolute;
 animation: alternate slideUp 6s infinite;
+z-index: -1;
 
 top: 20%;
 width: 125px;
@@ -285,13 +286,15 @@ left: 20%;
   left: 30%;
   width: 125px;
   animation: alternate slideDown 4s infinite;
+z-index: -1;
+
 }
 .obj3{
   position: absolute;
   top: 60%;
   width: 125px;
   animation: alternate slideUp 8s infinite;
-
+z-index: -1;
   left: 75%;
 }
 .obj4{
