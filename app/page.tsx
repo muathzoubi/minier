@@ -69,7 +69,7 @@ export default function CryptoInvestLanding() {
         <main className="container mx-auto mt-20 text-center text-white">
           <h2 className="text-5xl font-bold mb-6">استثمر في مستقبل المال الرقمي</h2>
           <p className="text-xl mb-10">منصة كريبتو إنفست توفر لك فرصة الاستثمار في أكبر العملات المشفرة بكل سهولة وأمان</p>
-          <Button size="lg" className="bg-green-600 hover:bg-green-700">ابدأ الاستثمار الآن</Button>
+         <Link href="/sign"> <Button size="lg" className="bg-green-600 hover:bg-green-700">ابدأ الاستثمار الآن</Button></Link>
         </main>
 
         {/* ميزات المنصة */}
