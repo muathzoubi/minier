@@ -44,7 +44,6 @@ export default function CryptoInvestLanding() {
         <FloatingShape size={120} color="#2B6CB0" speed={0.8} delay={3000} />
         <FloatingShape size={90} color="#4299E1" speed={1.2} delay={1500} />
       </div>
-
       {/* المحتوى */}
       <div className="relative z-10">
         {/* الرأس */}
@@ -76,7 +75,7 @@ export default function CryptoInvestLanding() {
         <section className="container mx-auto mt-20">
           <h3 className="text-3xl font-bold text-center mb-10">لماذا كريبتو إنفست؟</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+            <Card className="bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <Bitcoin className="w-10 h-10 mb-2" />
                 <CardTitle>تنوع العملات</CardTitle>
@@ -85,7 +84,7 @@ export default function CryptoInvestLanding() {
                 <p>استثمر في مجموعة واسعة من العملات المشفرة الرائدة في السوق</p>
               </CardContent>
             </Card>
-            <Card className="bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+            <Card className="bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <DollarSign className="w-10 h-10 mb-2" />
                 <CardTitle>عوائد مجزية</CardTitle>
@@ -94,7 +93,7 @@ export default function CryptoInvestLanding() {
                 <p>فرص لتحقيق أرباح عالية مع استراتيجيات استثمار مدروسة</p>
               </CardContent>
             </Card>
-            <Card className="bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+            <Card className="bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <TrendingUp className="w-10 h-10 mb-2" />
                 <CardTitle>تحليلات متقدمة</CardTitle>
@@ -103,7 +102,7 @@ export default function CryptoInvestLanding() {
                 <p>أدوات تحليل وتوقعات لمساعدتك في اتخاذ قرارات استثمارية ذكية</p>
               </CardContent>
             </Card>
-            <Card className="bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+            <Card className="bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <Shield className="w-10 h-10 mb-2" />
                 <CardTitle>أمان وموثوقية</CardTitle>
@@ -115,7 +114,7 @@ export default function CryptoInvestLanding() {
           </div>
         </section>
    {/* قسم الخطط */}
-   <section className="container mx-auto mt-20 px-4">
+   <section className="container mx-auto mt-20 px-4" dir='rtl'>
           <h3 className="text-3xl font-bold text-center mb-10">اختر الخطة المناسبة لك</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-green-300 bg-opacity-50 border-green-700 backdrop-blur-sm">
@@ -183,7 +182,7 @@ export default function CryptoInvestLanding() {
         <section className="container mx-auto mt-20">
           <h3 className="text-3xl font-bold text-center mb-10">معلومات إضافية عن كريبتو إنفست</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <Card className="bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+            <Card className="bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <BarChart2 className="w-10 h-10 mb-2" />
                 <CardTitle>إحصائيات المنصة</CardTitle>
@@ -197,7 +196,7 @@ export default function CryptoInvestLanding() {
                 </ul>
               </CardContent>
             </Card>
-            <Card className="bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+            <Card className="bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
               <CardHeader>
                 <Users className="w-10 h-10 mb-2" />
                 <CardTitle>خدمة العملاء</CardTitle>
@@ -217,7 +216,7 @@ export default function CryptoInvestLanding() {
 
         {/* نموذج الاشتراك */}
         <section className="container mx-auto mt-20 mb-20" id="contact">
-          <Card className="max-w-md mx-auto bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
+          <Card className="max-w-md mx-auto bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
             <CardHeader>
               <CardTitle>انضم إلينا اليوم</CardTitle>
               <CardDescription>احصل على آخر الأخبار والعروض الحصرية</CardDescription>

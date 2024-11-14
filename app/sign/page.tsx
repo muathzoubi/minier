@@ -167,7 +167,7 @@ function AuthTabs() {
         <TabsTrigger value="register">إنشاء حساب</TabsTrigger>
       </TabsList>
       <TabsContent value="login">
-        <Card>
+        <Card className='bg-white'>
           <CardHeader>
             <CardTitle>تسجيل الدخول</CardTitle>
             <CardDescription>أدخل بيانات حسابك للوصول إلى لوحة التحكم.</CardDescription>
@@ -175,6 +175,7 @@ function AuthTabs() {
           <CardContent className="space-y-2">
             <form onSubmit={handleLogin} className="space-y-2">
               <Input 
+              className='text-black'
                 type="email" 
                 placeholder="البريد الإلكتروني" 
                 value={email}
@@ -182,7 +183,8 @@ function AuthTabs() {
                 required
               />
               <Input 
-                type="password" 
+              className='text-black'
+              type="password" 
                 placeholder="كلمة المرور" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -196,7 +198,7 @@ function AuthTabs() {
         </Card>
       </TabsContent>
       <TabsContent value="register">
-        <Card>
+        <Card className='bg-white'>
           <CardHeader>
             <CardTitle>إنشاء حساب</CardTitle>
             <CardDescription>قم بإنشاء حساب جديد للبدء في الاستثمار.</CardDescription>
@@ -204,21 +206,24 @@ function AuthTabs() {
           <CardContent className="space-y-2">
             <form onSubmit={handleRegister} className="space-y-2">
               <Input 
-                placeholder="الاسم الكامل" 
+              className='text-black'
+              placeholder="الاسم الكامل" 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
               <Input 
                 type="email" 
-                placeholder="البريد الإلكتروني" 
+              className='text-black'
+              placeholder="البريد الإلكتروني" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <Input 
                 type="password" 
-                placeholder="كلمة المرور" 
+              className='text-black'
+              placeholder="كلمة المرور" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required

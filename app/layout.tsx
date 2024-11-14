@@ -57,11 +57,16 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <main className=" h-auto min-h-screen  text-white overflow-hidden">
+<img className='obj1'  src="/images/1.svg" alt='obj' />
+<img className='obj2'  src="/images/2.svg" alt='obj' />
+<img className='obj3'  src="/images/3.svg" alt='obj' />
+<img className='obj4'  src="/images/dfd.jpg" alt='obj' />
+
             {children}
           </main>
          {/* تذييل الصفحة */}

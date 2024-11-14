@@ -11,26 +11,26 @@ export default function WalletPage() {
       <div className="container mx-auto mt-12" dir='rtl'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Card className="col-span-2 bg-">
-            <CardHeader className='text-green-500'>
+            <CardHeader className='text-green-100'>
               <CardTitle className="text-2xl">الرصيد الإجمالي</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-4xl font-bold">$12,345.67</p>
-              <p className="text-green-400 mt-2">+5.23% خلال الـ 24 ساعة الماضية</p>
+              <p className="text-green-200 mt-2">+5.23% خلال الـ 24 ساعة الماضية</p>
             </CardContent>
           </Card>
           <Card className="bg-white-100 text-white">
-            <CardHeader className='text-green-500'>
+            <CardHeader className='text-green-100'>
               <CardTitle>العمليات السريعة</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <Button className="w-full  text-green-500" variant="outline">
+              <Button className="w-full  text-green-200" variant="outline">
                 <ArrowUpRight className="mr-2 h-4 w-4" /> إيداع
               </Button>
-              <Button className="w-full text-blue-500" variant="outline">
+              <Button className="w-full text-blue-200" variant="outline">
                 <ArrowDownLeft className="mr-2 h-4 w-4" /> سحب
               </Button>
-              <Button className="w-full text-red-500  " variant="outline">
+              <Button className="w-full text-red-200  " variant="outline">
                 <RefreshCw className="mr-2 h-4 w-4" /> تحويل
               </Button>
             </CardContent>
@@ -45,14 +45,14 @@ export default function WalletPage() {
           </TabsList>
           <TabsContent value="assets ">
             <Card>
-              <CardHeader className='text-green-500' >
+              <CardHeader className='text-green-200' >
                 <CardTitle>أصولك</CardTitle>
                 <CardDescription>قائمة بجميع العملات المشفرة في محفظتك</CardDescription>
               </CardHeader>
               <CardContent>
                 <Table>
                   <TableHeader>
-                    <TableRow className='text-blue-500'>
+                    <TableRow className='text-blue-200'>
                       <TableHead>العملة</TableHead>
                       <TableHead>الرصيد</TableHead>
                       <TableHead>القيمة بالدولار</TableHead>
@@ -60,19 +60,19 @@ export default function WalletPage() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    <TableRow className='text-blue-500'>
+                    <TableRow className='text-blue-200'>
                       <TableCell>بيتكوين (BTC)</TableCell>
                       <TableCell>0.5 BTC</TableCell>
                       <TableCell>$8,234.50</TableCell>
                       <TableCell className="text-green-400">+2.3%</TableCell>
                     </TableRow>
-                    <TableRow className='text-blue-500'>
+                    <TableRow className='text-blue-200'>
                       <TableCell>إيثيريوم (ETH)</TableCell>
                       <TableCell>5.2 ETH</TableCell>
                       <TableCell>$3,456.78</TableCell>
                       <TableCell className="text-red-400">-1.5%</TableCell>
                     </TableRow>
-                    <TableRow className='text-blue-500'>
+                    <TableRow className='text-blue-200'>
                       <TableCell>كاردانو (ADA)</TableCell>
                       <TableCell>1000 ADA</TableCell>
                       <TableCell>$654.39</TableCell>
@@ -85,14 +85,14 @@ export default function WalletPage() {
           </TabsContent>
           <TabsContent value="transactions">
             <Card>
-              <CardHeader className='text-green-500'>
+              <CardHeader className='text-green-200'>
                 <CardTitle>المعاملات الأخيرة</CardTitle>
                 <CardDescription>سجل معاملاتك خلال الـ 30 يومًا الماضية</CardDescription>
               </CardHeader>
               <CardContent>
                 <Table>
                   <TableHeader>
-                        <TableRow className='text-blue-500'>
+                        <TableRow className='text-blue-200'>
                       <TableHead>التاريخ</TableHead>
                       <TableHead>النوع</TableHead>
                       <TableHead>العملة</TableHead>
@@ -101,21 +101,21 @@ export default function WalletPage() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                        <TableRow className='text-blue-500'>
+                        <TableRow className='text-blue-200'>
                       <TableCell>2024-03-15</TableCell>
                       <TableCell>شراء</TableCell>
                       <TableCell>BTC</TableCell>
                       <TableCell>0.1 BTC</TableCell>
                       <TableCell className="text-green-400">مكتمل</TableCell>
                     </TableRow>
-                        <TableRow className='text-blue-500'>
+                        <TableRow className='text-blue-200'>
                       <TableCell>2024-03-10</TableCell>
                       <TableCell>بيع</TableCell>
                       <TableCell>ETH</TableCell>
                       <TableCell>2.5 ETH</TableCell>
                       <TableCell className="text-green-400">مكتمل</TableCell>
                     </TableRow>
-                        <TableRow className='text-blue-500'>
+                        <TableRow className='text-blue-200'>
                       <TableCell>2024-03-05</TableCell>
                       <TableCell>إيداع</TableCell>
                       <TableCell>USD</TableCell>
@@ -128,8 +128,8 @@ export default function WalletPage() {
             </Card>
           </TabsContent>
           <TabsContent value="deposit">
-            <Card className='text-green-500'>
-              <CardHeader  className='text-green-500'>
+            <Card className='text-green-200'>
+              <CardHeader  className='text-green-200'>
                 <CardTitle>إيداع الأموال</CardTitle>
                 <CardDescription>أضف أموالًا إلى محفظتك</CardDescription>
               </CardHeader>
@@ -141,17 +141,17 @@ export default function WalletPage() {
                 <div className="space-y-2">
                   <label>طريقة الدفع</label>
                   <div className="grid grid-cols-2 gap-4">
-                    <Button variant="outline">
-                      <CreditCard className="mr-2 h-4 w-4" /> بطاقة ائتمان
+                    <Button variant="outline" className='bg-black'>
+                      <CreditCard className="mr-2 h-4 w-4 " /> بطاقة ائتمان
                     </Button>
-                    <Button variant="outline">
-                      <Wallet className="mr-2 h-4 w-4" /> تحويل بنكي
+                    <Button variant="destructive">
+                      <Wallet className="mr-2 h-4 w-4" /> ايداع كريبتو
                     </Button>
                   </div>
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg- outline text-green-500 ">إتمام الإيداع</Button>
+                <Button className="w-full bg-  text-green-200 ">إتمام الإيداع</Button>
               </CardFooter>
             </Card>
           </TabsContent>
