@@ -61,7 +61,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className=" h-auto min-h-screen bg-gradient-to-b from-blue-900 via-green-900 to-purple-900 text-white overflow-hidden">
+          <main className=" h-auto min-h-screen  text-white overflow-hidden">
             {children}
           </main>
          {/* تذييل الصفحة */}

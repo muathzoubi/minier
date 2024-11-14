@@ -55,9 +55,10 @@ export default function CryptoInvestLanding() {
           <nav className="flex items-center space-x-4 space-x-reverse">
             <ul className="flex space-x-4 space-x-reverse xsm:hidden">
               <li><Button variant="ghost">الرئيسية</Button></li>
-              <li><Button variant="ghost">عن المنصة</Button></li>
-              <li><Button variant="ghost">الاستثمارات</Button></li>
-              <li><Button variant="ghost">تواصل معنا</Button></li>
+              <li>
+                <Link href={'/desc'}><Button variant="ghost" >عن المنصة</Button></Link></li>
+              <li >
+              <Link href={'#contact'}></Link><Button  variant="ghost">تواصل معنا</Button></li>
             </ul>
            <Link href="/sign"> <Button variant="outline" className="mr-2 text-black">تسجيل الدخول</Button></Link>
            <Link href="/sign"> <Button className='bg-green-600'>التسجيل</Button></Link>
@@ -117,7 +118,7 @@ export default function CryptoInvestLanding() {
    <section className="container mx-auto mt-20 px-4">
           <h3 className="text-3xl font-bold text-center mb-10">اختر الخطة المناسبة لك</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-blue-800 bg-opacity-50 border-blue-700 backdrop-blur-sm">
+            <Card className="bg-green-300 bg-opacity-50 border-blue-700 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl">الخطة الأساسية</CardTitle>
                 <CardDescription>للمستثمرين المبتدئين</CardDescription>
@@ -211,7 +212,7 @@ export default function CryptoInvestLanding() {
         </section>
 
         {/* نموذج الاشتراك */}
-        <section className="container mx-auto mt-20 mb-20">
+        <section className="container mx-auto mt-20 mb-20" id="contact">
           <Card className="max-w-md mx-auto bg-green-800 bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
             <CardHeader>
               <CardTitle>انضم إلينا اليوم</CardTitle>
