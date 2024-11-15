@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/navigation/navbar";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Footer } from "@/components/navigation/footer";
 import { Settings } from "@/lib/meta";
 import "./globals.css";
 
@@ -47,12 +43,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ar" suppressHydrationWarning>
       { Settings.gtmconnected && (
         <GoogleTagManager gtmId={Settings.gtm} />
       )}
       <body
-        className={` font-regular`}
+        className={`font-regular`}
         suppressHydrationWarning
       >
         <ThemeProvider

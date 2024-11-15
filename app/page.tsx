@@ -3,10 +3,10 @@ import React, { useEffect, useRef } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Bitcoin, DollarSign, TrendingUp, Shield, BarChart2, Users, Check } from 'lucide-react'
+import { Bitcoin, DollarSign, TrendingUp, Shield, BarChart2, Users, Check, Menu } from 'lucide-react'
 import Link from 'next/link'
 
-const FloatingShape = ({ size, color, speed, delay }:any) => {
+const FloatingShape = ({ size, color, speed, delay }: any) => {
   const shapeRef = useRef<any>(null);
 
   useEffect(() => {
@@ -35,8 +35,10 @@ const FloatingShape = ({ size, color, speed, delay }:any) => {
 };
 
 export default function CryptoInvestLanding() {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
   return (
-<>     {/* خلفية متحركة */}
+    <>
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <FloatingShape size={100} color="#4C51BF" speed={1} delay={0} />
         <FloatingShape size={80} color="#6B46C1" speed={1.5} delay={2000} />
@@ -44,34 +46,60 @@ export default function CryptoInvestLanding() {
         <FloatingShape size={120} color="#2B6CB0" speed={0.8} delay={3000} />
         <FloatingShape size={90} color="#4299E1" speed={1.2} delay={1500} />
       </div>
-      {/* المحتوى */}
       <div className="relative z-10">
-        {/* الرأس */}
-        <header className="container mx-auto py-6 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">
-            <img src='/images/logo-inv20.svg' alt='logo' width={155}/>
-          </h1>
-          <nav className="flex items-center space-x-4 space-x-reverse">
-            <ul className="flex space-x-4 space-x-reverse xsm:hidden">
-              <li><Button variant="ghost">الرئيسية</Button></li>
-              <li>
-                <Link href={'/desc'}><Button variant="ghost" >عن المنصة</Button></Link></li>
-              <li >
-              <Link href={'#contact'}></Link><Button  variant="ghost">تواصل معنا</Button></li>
-            </ul>
-           <Link href="/sign"> <Button variant="outline" className="mr-2 text-black">تسجيل الدخول</Button></Link>
-           <Link href="/sign"> <Button className='bg-green-600'>التسجيل</Button></Link>
-          </nav>
+      <header className="container mx-auto py-6 px-4">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold">كريبتو إنفست</h1>
+            <Button variant="ghost" className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+              <Menu className="h-6 w-6" />
+            </Button>
+            <nav className="hidden lg:flex items-center space-x-4 space-x-reverse">
+              <ul className="flex space-x-4 space-x-reverse">
+                <li><Button variant="ghost">الرئيسية</Button></li>
+                <li><Button variant="ghost">عن المنصة</Button></li>
+                <li><Button variant="ghost">تواصل معنا</Button></li>
+              </ul>
+              <Button variant="outline" className="mr-2 text-black">تسجيل الدخول</Button>
+              <Button>التسجيل</Button>
+            </nav>
+          </div>
+          {menuOpen && (
+            <nav className="mt-4 lg:hidden">
+              <ul className="flex flex-col space-y-2">
+                <li>
+                <Link href={'/'}>
+
+                  <Button variant="ghost" className="w-full justify-start">الرئيسية</Button>
+                  </Link>
+                  </li>
+                <li>
+                  <Link href={'/desc'}>
+                  <Button variant="ghost" className="w-full justify-start">عن المنصة
+                </Button>
+                </Link>
+                </li>
+                <li><Button variant="ghost" className="w-full justify-start">تواصل معنا</Button></li>
+              </ul>
+              <div className="mt-4 flex flex-col space-y-2">
+               <Link href="/sign">
+                <Button variant="outline" className="w-full">تسجيل الدخول</Button>
+               </Link>
+               <Link href="/sign">
+                <Button className="w-full">التسجيل</Button>
+                </Link>
+
+              </div>
+            </nav>
+          )}
         </header>
 
-        {/* القسم الرئيسي */}
+
         <main className="container mx-auto mt-20 text-center text-white">
           <h2 className="text-5xl font-bold mb-6">استثمر في مستقبل المال الرقمي</h2>
           <p className="text-xl mb-10">منصة كريبتو إنفست توفر لك فرصة الاستثمار في أكبر العملات المشفرة بكل سهولة وأمان</p>
          <Link href="/sign"> <Button size="lg" className="bg-green-600 hover:bg-green-700">ابدأ الاستثمار الآن</Button></Link>
         </main>
 
-        {/* ميزات المنصة */}
         <section className="container mx-auto mt-20">
           <h3 className="text-3xl font-bold text-center mb-10">لماذا كريبتو إنفست؟</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -113,7 +141,6 @@ export default function CryptoInvestLanding() {
             </Card>
           </div>
         </section>
-   {/* قسم الخطط */}
    <section className="container mx-auto mt-20 px-4" dir='rtl'>
           <h3 className="text-3xl font-bold text-center mb-10">اختر الخطة المناسبة لك</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -178,7 +205,6 @@ export default function CryptoInvestLanding() {
           </div>
         </section>
 
-        {/* معلومات إضافية */}
         <section className="container mx-auto mt-20">
           <h3 className="text-3xl font-bold text-center mb-10">معلومات إضافية عن كريبتو إنفست</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -214,7 +240,6 @@ export default function CryptoInvestLanding() {
           </div>
         </section>
 
-        {/* نموذج الاشتراك */}
         <section className="container mx-auto mt-20 mb-20" id="contact">
           <Card className="max-w-md mx-auto bg-opacity-50 hover:border-green-700 backdrop-blur-sm">
             <CardHeader>

@@ -28,8 +28,6 @@
     --radius: 0.5rem;
   }
 
-  * {}
-
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -271,33 +269,36 @@ span.katex-html {
 .CollapsibleContent[data-state='closed'] {
   animation: slideUp 300ms ease-out;
 }
-.obj1{
-position: absolute;
-animation: alternate slideUp 6s infinite;
-z-index: -1;
 
-top: 20%;
-width: 125px;
-left: 20%;
+.obj1 {
+  position: absolute;
+  animation: alternate slideUp 6s infinite;
+  z-index: -1;
+
+  top: 20%;
+  width: 125px;
+  left: 20%;
 }
-.obj2{
+
+.obj2 {
   position: absolute;
   top: 40%;
   left: 30%;
   width: 125px;
   animation: alternate slideDown 4s infinite;
-z-index: -1;
-
+  z-index: -1;
 }
-.obj3{
+
+.obj3 {
   position: absolute;
   top: 60%;
   width: 125px;
   animation: alternate slideUp 8s infinite;
-z-index: -1;
+  z-index: -1;
   left: 75%;
 }
-.obj4{
+
+.obj4 {
   position: absolute;
   top: 0%;
   width: 100%;
@@ -306,13 +307,14 @@ z-index: -1;
   right: 0;
   z-index: -1;
 }
+
 @keyframes slideDown {
   from {
-    transform:scale(1);
+    transform: scale(1);
   }
 
   to {
-    transform:scale(2.5);
+    transform: scale(2.5);
   }
 }
 
