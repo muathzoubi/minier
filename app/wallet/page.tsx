@@ -4,22 +4,57 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { ArrowUpRight, ArrowDownLeft, Wallet, CreditCard, RefreshCw } from 'lucide-react'
-
-export default function WalletPage() {
+import { ArrowUpRight, ArrowDownLeft, Wallet, CreditCard, RefreshCw, X  } from 'lucide-react'
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import CreditCardForm from '@/components/paymentform/payment'
+ function Modal({
+  isOpen,
+  onClose,
+  title,
+  description,
+  children,
+  footer
+}: any) {
   return (
-      <div className="container mx-auto mt-12 bg-white" dir='rtl'>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-[425px] bg-blue-900 bg-opacity-90 backdrop-blur-sm text-white border-blue-700">
+        <DialogHeader>
+          <DialogTitle className="text-xl sm:text-2xl font-bold">{title}</DialogTitle>
+          {description && (
+            <DialogDescription className="text-gray-300">
+              {description}
+            </DialogDescription>
+          )}
+        </DialogHeader>
+        <Button
+          className="absolute left-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
+          onClick={onClose}
+        >
+          <X className="h-4 w-4" />
+          <span className="sr-only">إغلاق</span>
+        </Button>
+        <div className="py-4">{children}</div>
+        {footer && <DialogFooter>{footer}</DialogFooter>}
+      </DialogContent>
+    </Dialog>
+  )
+}
+export default function WalletPage() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+
+  return (
+      <div className="container mx-auto mt-12" dir='rtl'>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Card className="col-span-2 bg-">
-            <CardHeader className='text-white'>
+            <CardHeader className='text-green-400'>
               <CardTitle className="text-2xl">الرصيد الإجمالي</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">$12,345.67</p>
+              <p className="text-4xl text-green-200 font-bold">$12,345.67</p>
               <p className="text-green-200 mt-2">+5.23% خلال الـ 24 ساعة الماضية</p>
             </CardContent>
           </Card>
-          <Card className="bg-white-100 text-white">
+          <Card className="bg-white-100 text-green-400">
             <CardHeader className='text-green-100'>
               <CardTitle>العمليات السريعة</CardTitle>
             </CardHeader>
@@ -45,7 +80,7 @@ export default function WalletPage() {
           </TabsList>
           <TabsContent value="assets ">
             <Card>
-              <CardHeader className='text-white' >
+              <CardHeader className='text-green-400' >
                 <CardTitle>أصولك</CardTitle>
                 <CardDescription>قائمة بجميع العملات المشفرة في محفظتك</CardDescription>
               </CardHeader>
@@ -141,7 +176,7 @@ export default function WalletPage() {
                 <div className="space-y-2">
                   <label>طريقة الدفع</label>
                   <div className="grid grid-cols-2 gap-4">
-                    <Button variant="outline" className='bg-black'>
+                    <Button variant="outline" className='bg-black' onClick={()=>setIsModalOpen(true)}>
                       <CreditCard className="mr-2 h-4 w-4 " /> بطاقة ائتمان
                     </Button>
                     <Button variant="destructive">
@@ -151,11 +186,12 @@ export default function WalletPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-  text-green-200 ">إتمام الإيداع</Button>
+                <Button className="w-full bg-blue-500  text-green-200 ">إتمام الإيداع</Button>
               </CardFooter>
             </Card>
           </TabsContent>
         </Tabs>
+        <Modal isOpen={isModalOpen} onClose={()=>setIsModalOpen(false)} description={<CreditCardForm />} set></Modal>
     </div>
   )
 }

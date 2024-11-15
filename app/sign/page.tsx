@@ -242,35 +242,35 @@ function AuthTabs() {
 function Dashboard({ user }:any) {
   return (
     <div className="space-y-4" dir='rtl'>
-      <h2 className="text-2xl font-bold text-green-500 ">مرحبًا بك في لوحة التحكم، {user.email}</h2>
+      <h2 className="text-2xl font-bold text-white  ">مرحبًا بك في لوحة التحكم، {user.email}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium  text-green-500 ">إجمالي الرصيد</CardTitle>
+            <CardTitle className="text-sm font-medium  text-white  ">إجمالي الرصيد</CardTitle>
             <DollarSign className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-500 ">$45,231.89</div>
+            <div className="text-2xl font-bold text-white  ">$45,231.89</div>
             <p className="text-xs text-muted-foreground">+20.1% من الشهر الماضي</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium  text-green-500 ">الاستثمارات النشطة</CardTitle>
+            <CardTitle className="text-sm font-medium  text-white  ">الاستثمارات النشطة</CardTitle>
             <BarChart3 className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-500 ">7</div>
+            <div className="text-2xl font-bold text-white  ">7</div>
             <p className="text-xs text-muted-foreground">+2 من الأسبوع الماضي</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium  text-green-500 ">إجمالي الأرباح</CardTitle>
+            <CardTitle className="text-sm font-medium  text-white ">إجمالي الأرباح</CardTitle>
             <CreditCard className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-500 ">$12,234.59</div>
+            <div className="text-2xl font-bold text-white ">$12,234.59</div>
             <p className="text-xs text-muted-foreground">+19% من الشهر الماضي</p>
           </CardContent>
         </Card>
