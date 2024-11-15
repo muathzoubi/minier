@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React,{useState} from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -6,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowUpRight, ArrowDownLeft, Wallet, CreditCard, RefreshCw, X  } from 'lucide-react'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import CreditCardForm from '@/components/paymentform/payment'
+import CreditCardForm from '@/components/paymentform/payment';
  function Modal({
   isOpen,
   onClose,
@@ -40,7 +41,7 @@ import CreditCardForm from '@/components/paymentform/payment'
   )
 }
 export default function WalletPage() {
-  const [isModalOpen, setIsModalOpen] = React.useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
       <div className="container mx-auto mt-12" dir='rtl'>
