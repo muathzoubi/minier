@@ -13,11 +13,11 @@ export default function ExplanationPage() {
 
       <main className="container mx-auto mt-12">
         <Tabs defaultValue="basics" className="w-full">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-4">
-            <TabsTrigger value="basics">أساسيات الاستثمار</TabsTrigger>
-            <TabsTrigger value="platform">منصة كريبتو إنفست</TabsTrigger>
-            <TabsTrigger value="strategies">استراتيجيات الاستثمار</TabsTrigger>
-            <TabsTrigger value="security">الأمان والحماية</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-4 md:grid-cols-4">
+            <TabsTrigger value="basics">أساسيات </TabsTrigger>
+            <TabsTrigger value="platform">منصة</TabsTrigger>
+            <TabsTrigger value="strategies">استراتيجيات</TabsTrigger>
+            <TabsTrigger value="security">الأمان </TabsTrigger>
           </TabsList>
           <TabsContent value="basics">
             <Card>
