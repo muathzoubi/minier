@@ -161,7 +161,7 @@ export default function CryptoInvestLanding() {
                 </ul>
               </CardContent>
               <CardFooter>
-              <Link href={'/sgin'}>        <Button className="w-full bg- border">اشترك الآن</Button></Link>
+              <Link  className="w-full" href={'/sgin'}>        <Button className="w-full bg- border">اشترك الآن</Button></Link>
               </CardFooter>
             </Card>
             <Card className="bg- bg-opacity-50 border-green-700 backdrop-blur-sm border-2 border-green-400">
@@ -181,7 +181,7 @@ export default function CryptoInvestLanding() {
                 </ul>
               </CardContent>
               <CardFooter>
-              <Link href={'/sgin'}>    <Button className="w-full bg-green-500 text- hover:bg-green-500 border">اشترك الآن</Button></Link>
+              <Link className="w-full" href={'/sgin'}>    <Button className="w-full bg-green-500 text- hover:bg-green-500 border">اشترك الآن</Button></Link>
               </CardFooter>
             </Card>
             <Card className="bg-green-300 bg-opacity-50 border-green-300 backdrop-blur-sm">
@@ -200,7 +200,7 @@ export default function CryptoInvestLanding() {
                 </ul>
               </CardContent>
               <CardFooter>
-             <Link href={'/sgin'}>   <Button className="w-full bg- border">اتصل بنا</Button></Link>
+             <Link className="w-full" href={'/sgin'}>   <Button className="w-full bg- border">اتصل بنا</Button></Link>
               </CardFooter>
             </Card>
           </div>
