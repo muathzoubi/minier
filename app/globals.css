@@ -68,6 +68,7 @@
     font-family: "Zain", sans-serif !important;
     text-shadow: 0 0 1px darkgray;
     animation: linear show 2s;
+    overflow-x: hidden;
   }
 }
 
