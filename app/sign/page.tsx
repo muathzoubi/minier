@@ -124,6 +124,7 @@ function AuthTabs() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
+  const [plan, setPlan] = useState('')
   const { toast } = useToast()
 
   const handleLogin = async (e:any) => {
@@ -228,6 +229,12 @@ function AuthTabs() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <select onSelect={(e)=>setPlan(e.currentTarget.value)} id="countries" className="bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option selected>اختر نوع الخطة</option>
+                <option value={'1'}>الخطة الاساسية</option>
+                <option value={'2'}>الخطة الاحترافية </option>
+                <option value={'3'}> خطة الاعمال </option>
+              </select>
               <Button type="submit" className="w-full bg-green-500">
                 <UserPlus className="ml-2 h-4 w-4" /> إنشاء الحساب
               </Button>
