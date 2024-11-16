@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormDescription, FormField, FormItem,  FormMessage } from "@/components/ui/form"
 import { CreditCard, Lock } from 'lucide-react'
 
+
 const formSchema = z.object({
   cardNumber: z.string().regex(/^\d{16}$/, { message: 'يجب أن يتكون رقم البطاقة من 16 رقمًا' }),
   cardHolder: z.string().min(2, { message: 'يجب أن يتكون اسم حامل البطاقة من حرفين على الأقل' }),

@@ -8,7 +8,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowUpRight, ArrowDownLeft, Wallet, CreditCard, RefreshCw, X  } from 'lucide-react'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import CreditCardForm from '@/components/paymentform/payment';
- function Modal({
+ 
+
+function Modal({
   isOpen,
   onClose,
   title,

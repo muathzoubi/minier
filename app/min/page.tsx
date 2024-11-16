@@ -45,7 +45,7 @@ export default function MiningCounter() {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto bg-blue-900 bg-opacity-50 backdrop-blur-sm text-white border-blue-700">
+    <Card className="w-full pt-6 mt-auto max-w-md mx-auto bg-blue-900 bg-opacity-50 backdrop-blur-sm text-white border-blue-700">
       <CardHeader>
         <CardTitle className="text-2xl font-bold flex items-center justify-center">
           <Pickaxe className="mr-2" />

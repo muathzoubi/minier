@@ -308,7 +308,14 @@ span.katex-html {
   right: 0;
   z-index: -1;
 }
-
+@media only screen and (max-width: 400px) {
+  aside {
+    display: none !important;
+  }
+  .collpse {
+    display: block !important;
+  }
+}
 @keyframes slideDown {
   from {
     transform: scale(1);

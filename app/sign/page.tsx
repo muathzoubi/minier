@@ -57,7 +57,7 @@ export default function CryptoInvestmentPlatform() {
   return (
     <div className="flex h-screen  text-green-600" >
       {/* Sidebar */ user ?
-      <aside className=" w-64 bg-gray-900 dark:bg-gray-800 p-4 xlg:hidden">
+      <aside className=" w-64 bg-gray-900 dark:bg-gray-800 p-4">
         <h1 className="text-2xl font-bold text-green-500  mb-6 text-center">
         <img src='/images/logo-inv20.svg' alt='logo' width={155}/>
             
