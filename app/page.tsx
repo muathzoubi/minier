@@ -49,8 +49,7 @@ export default function CryptoInvestLanding() {
       <div className="relative z-10">
       <header className="container mx-auto py-6 px-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold">كريبتو إنفست</h1>
-            <Button variant="ghost" className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+<img src='/images/logo-inv20.svg' width={120} alt='logo'/>            <Button variant="ghost" className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
               <Menu className="h-6 w-6" />
             </Button>
             <nav className="hidden lg:flex items-center space-x-4 space-x-reverse">
