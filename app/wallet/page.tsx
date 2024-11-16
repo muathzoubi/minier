@@ -51,8 +51,8 @@ export default function WalletPage() {
               <CardTitle className="text-2xl">الرصيد الإجمالي</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl text-green-200 font-bold">$12,345.67</p>
-              <p className="text-green-200 mt-2">+5.23% خلال الـ 24 ساعة الماضية</p>
+              <p className="text-4xl text-green-200 font-bold">$0.67</p>
+              <p className="text-green-200 mt-2">+0.23% خلال الـ 24 ساعة الماضية</p>
             </CardContent>
           </Card>
           <Card className="bg-white-100 text-green-400">
