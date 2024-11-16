@@ -131,16 +131,9 @@ function AuthTabs() {
     e.preventDefault()
     try {
       await signInWithEmailAndPassword(auth, email, password)
-      toast({
-        title: "تم تسجيل الدخول بنجاح",
-        description: "مرحبًا بك مرة أخرى!",
-      })
+      alert( "تم تسجيل الدخول بنجاح")
     } catch (error:any) {
-      toast({
-        title: "خطأ في تسجيل الدخول",
-        description: error.message,
-        variant: "destructive",
-      })
+      alert( "خطأ في كلمة المرور او الايميل")
     }
   }
 
